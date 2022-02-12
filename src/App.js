@@ -20,6 +20,9 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
+          <Route path="/analytics">
+            {/* <Analytics /> */}
+          </Route>
           <Route path="/users">
             <UserList />
           </Route>
