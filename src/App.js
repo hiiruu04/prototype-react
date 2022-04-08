@@ -20,8 +20,28 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/analytics">
-            {/* <Analytics /> */}
+          <Route 
+            path="/sla5-trs-cl/:id" 
+            render={(props) => <Home {...props} anomaly="Cooling Loss" />}
+          />
+          <Route 
+            path="/sla5-trs-lb/:id" 
+            render={(props) => <Home {...props} anomaly="Local Bearing" />}
+          />
+          {/* <Route>
+            <Home anomaly="Cooling Loss"/>
+          </Route>
+          <Route path="/sla5-trs-lb/:id">
+            <Home anomaly="Local Bearing"/>
+          </Route> */}
+          {/* <Route exact path="/cooling-loss">
+            <Home anomaly="Cooling Loss" />
+          </Route>
+          <Route exact path="/local-bearing">
+            <Home anomaly="Local Bearing" />
+          </Route> */}
+          {/* <Route path="/analytics">
+            <Analytics />
           </Route>
           <Route path="/users">
             <UserList />
@@ -40,7 +60,7 @@ function App() {
           </Route>
           <Route path="/newproduct">
             <NewProduct />
-          </Route>
+          </Route> */}
         </Switch>
       </div>
     </Router>

@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  development_react:
+    container_name: development_react
+    build:
+      context: ${PWD}
+      dockerfile: Docker/Dockerfile
+    volumes:
+      - '${PWD}:/app'
+      - '/app/node_modules'
+    ports:
+      - 3000:3000
+    command: npm start
+    environment:
+      - CHOKIDAR_USEPOLLING=true

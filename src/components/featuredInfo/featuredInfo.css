@@ -4,6 +4,14 @@
   justify-content: space-between;
 }
 
+.sensor-active{
+    color: #006400;
+    font-weight: 700;
+    background-color: azure;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
 .featuredItem {
   flex: 1;
   margin: 0px 20px;

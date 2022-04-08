@@ -1,21 +1,32 @@
 import { Divider } from "@material-ui/core";
 import "./featuredInfo.css";
 
-const FeaturedInfo=({title, count, percentage, first, last, asset, sensors, severity}) => {
+const FeaturedInfo=({asset_id, title, count, percentage, first, last, asset, sensors, _sensors, priority}) => {
     // console.log(sensors)
     return (
       <div className="featured">
         <div className="featuredItem">
           <span className="featuredTitle">Asset Information</span>
           <p>Asset: {asset.asset}</p>
+          <p>Asset id: {asset_id}</p>
           <p>Asset description: {asset.description}</p>
           <br />
           <p>List sensor:</p>
           {
+            _sensors ?
+            <ul>
+              {
+                _sensors.map((sensor)=>{return <li key={sensor.id}>{sensor.name}</li>})
+              }
+            </ul>
+            :
+            null
+          }
+          {
             sensors ?
             <ul>
               {
-                sensors.map((sensor)=>{return <li key={sensor.id}>{sensor.name}</li>})
+                sensors.map((sensor)=>{return <li className="sensor-active" key={sensor.id}>{sensor.name}</li>})
               }
             </ul>
             :
@@ -24,14 +35,34 @@ const FeaturedInfo=({title, count, percentage, first, last, asset, sensors, seve
         </div>
         <div className="featuredItem">
           <span className="featuredTitle">Anomaly Information</span>
-          <p>Anomaly detected: {title}</p>
+          <h2>Anomaly detected: {title}</h2>
           {
-            severity.length ?
-            <p>Severity: {severity}</p>
+            priority?
+            priority===1?
+            <h2>Priority: {priority} (Highest)</h2>
             :
-            <p>Severity: -</p>
+            priority===2?
+            <h2>Priority: {priority} (High)</h2>
+            :
+            priority===3?
+            <h2>Priority: {priority} (Medium)</h2>
+            :
+            priority===4?
+            <h2>Priority: {priority} (Low)</h2>
+            :
+            priority===5?
+            <h2>Priority: {priority} (Lowest)</h2>
+            :
+            <p>Priority: -</p>
+            :
+            null
           }
-          <p>Anomaly count: {count}</p>
+          {
+            count?
+            <p>Anomaly count: {count.reduce((a, b) => a + b, 0)}</p>
+            :
+            null
+          }
           <p>Anomaly percentage: {percentage}%</p>
           <Divider />
           {

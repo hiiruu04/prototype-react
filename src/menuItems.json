@@ -1,0 +1,164 @@
+{
+    "data" : [
+      {
+        "name": "Suralaya 5",
+        "children": [
+          {
+            "name": "Turbine System",
+            "children": [
+                {
+                    "name": "Bearing 1",
+                    "children":[
+                        {
+                            "name": "Cooling Loss",
+                            "asset_id":4,
+                            "url": "/sla5-trs-cl/1"
+                        },
+                        {
+                            "name": "Local Bearing",
+                            "asset_id":4,
+                            "url": "/sla5-trs-lb/2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bearing 2",
+                    "children":[
+                        {
+                            "name": "Cooling Loss",
+                            "asset_id":5,
+                            "url": "/sla5-trs-cl/2"
+                        },
+                        {
+                            "name": "Local Bearing",
+                            "asset_id":5,
+                            "url": "/sla5-trs-lb/2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bearing 3",
+                    "children":[
+                        {
+                            "name": "Cooling Loss",
+                            "asset_id":6,
+                            "url": "/sla5-trs-cl/3"
+                        },
+                        {
+                            "name": "Local Bearing",
+                            "asset_id":6,
+                            "url": "/sla5-trs-lb/3"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bearing 4",
+                    "children":[
+                        {
+                            "name": "Cooling Loss",
+                            "asset_id":7,
+                            "url": "/sla5-trs-cl/4"
+                        },
+                        {
+                            "name": "Local Bearing",
+                            "asset_id":7,
+                            "url": "/sla5-trs-lb/4"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bearing 5",
+                    "children":[
+                        {
+                            "name": "Cooling Loss",
+                            "asset_id":8,
+                            "url": "/sla5-trs-cl/5"
+                        },
+                        {
+                            "name": "Local Bearing",
+                            "asset_id":8,
+                            "url": "/sla5-trs-lb/5"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bearing 6",
+                    "children":[
+                        {
+                            "name": "Cooling Loss",
+                            "asset_id":9,
+                            "url": "/sla5-trs-cl/6"
+                        },
+                        {
+                            "name": "Local Bearing",
+                            "asset_id":9,
+                            "url": "/sla5-trs-lb/6"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bearing 7",
+                    "children":[
+                        {
+                            "name": "Cooling Loss",
+                            "asset_id":10,
+                            "url": "/sla5-trs-cl/7"
+                        },
+                        {
+                            "name": "Local Bearing",
+                            "asset_id":10,
+                            "url": "/sla5-trs-lb/7"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bearing 8",
+                    "children":[
+                        {
+                            "name": "Cooling Loss",
+                            "asset_id":11,
+                            "url": "/sla5-trs-cl/8"
+                        },
+                        {
+                            "name": "Local Bearing",
+                            "asset_id":11,
+                            "url": "/sla5-trs-lb/8"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bearing 9",
+                    "children":[
+                        {
+                            "name": "Cooling Loss",
+                            "asset_id":12,
+                            "url": "/sla5-trs-cl/9"
+                        },
+                        {
+                            "name": "Local Bearing",
+                            "asset_id":12,
+                            "url": "/sla5-trs-lb/9"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bearing 10",
+                    "children":[
+                        {
+                            "name": "Cooling Loss",
+                            "asset_id":13,
+                            "url": "/sla5-trs-cl/10"
+                        },
+                        {
+                            "name": "Local Bearing",
+                            "asset_id":13,
+                            "url": "/sla5-trs-lb/10"
+                        }
+                    ]
+                }
+              ]
+          }
+        ]
+      }
+    ]
+  }

@@ -11,19 +11,49 @@ const Recomendation=({datas}) => {
                   <TableHead>
                   <TableRow>
                       <TableCell>No</TableCell>
-                      <TableCell>Severity</TableCell>
-                      <TableCell>Recomendation</TableCell>
+                      <TableCell>Priority</TableCell>
+                      <TableCell>Occurence</TableCell>  
+                      <TableCell>First Occurence</TableCell>
+                      <TableCell>Last Occurence</TableCell>
+                      <TableCell>Recommendation</TableCell>
                   </TableRow>
                   </TableHead>
                   <TableBody>
                   {
                     datas.length?
-                      datas.map((data)=>{
+                      datas.map((data,index)=>{
                         return(
                           <TableRow>
-                            <TableCell>{data.index}</TableCell>
-                            <TableCell>{data.priority}</TableCell>
-                            <TableCell>{data.recomendation}</TableCell>
+                            <TableCell>{index+1}</TableCell>
+                            <TableCell>
+                              {
+                                data.priority===5 ?
+                                data.priority + " (Lowest)"
+                                :
+                                data.priority===4 ?
+                                data.priority + " (Low)"
+                                :
+                                data.priority===3 ?
+                                data.priority + " (Medium)"
+                                :
+                                data.priority===2 ?
+                                data.priority + " (High)"
+                                :
+                                data.priority + " (Highest)"
+                              }
+                            </TableCell>
+                            <TableCell>
+                              {data.occurence}
+                            </TableCell>
+                            <TableCell>
+                              {data.first}
+                            </TableCell>
+                            <TableCell>
+                              {data.last}
+                            </TableCell>
+                            <TableCell>
+                              <a href={data.recomendation}>Unduh file rekomendasi</a>
+                            </TableCell>
                           </TableRow>
                         )
                       })

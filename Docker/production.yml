@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  production_react:
+    container_name: production_react
+    build:
+      context: ${PWD}
+      dockerfile: Docker/Dockerfile.prod
+    environment:
+    - REACT_APP_HOST_DEV=localhost:5000
+    - REACT_APP_HOST_PROD=ecs-dev-alb-1769493295.ap-southeast-1.elb.amazonaws.com
+    ports:
+      - '1337:80'
